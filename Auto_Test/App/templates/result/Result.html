@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/result/js/result.js"></script>
+{% endblock %}
+
+{% block page_title %}Results{% endblock %}
+
+{% block content %}
+    <h3>Result</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/results/">List</a></li>
+        <li role="presentation" class="disabled"><a href="#">Detail</a></li>
+    </ul>
+
+    <div class="form-group">
+        <label for="r_id" class="control-label">ID</label>
+        <input class="form-control" id="r_id" readonly value="{{ r_id }}">
+    </div>
+
+    <div class="form-group">
+        <label for="r_name" class="control-label">Name</label>
+        <input class="form-control" type="text" id="r_name" placeholder="Name" readonly>
+    </div>
+    <div class="form-group">
+        <label for="r_result" class="control-label">Result</label>
+        <input class="form-control" type="text" id="r_result" placeholder="Result" readonly>
+    </div>
+    <div class="form-group">
+        <label for="r_errorLog" class="control-label">Error Log</label>
+        <textarea class="form-control" rows="10" id="r_errorLog" readonly></textarea>
+    </div>
+
+{% endblock %}

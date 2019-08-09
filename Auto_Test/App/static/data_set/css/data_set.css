@@ -1,0 +1,16 @@
+#row_del, #row_mod {
+    width: 3px;
+}
+
+#row_id {
+    width: 100px;
+}
+
+#h{
+    margin: 0px;
+    padding: 0px;
+}
+
+#prompt{
+    padding: 20px;
+}

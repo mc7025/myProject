@@ -1,0 +1,148 @@
+h4 {
+    text-align: center;
+    color: #003c71;
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.img-col {
+    width: 150px;
+    /*height: 150px;*/
+    max-height: 150px;
+}
+
+.row_img {
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.right {
+    background: -webkit-linear-gradient(left, #bbffbb, #93ff93);
+    background: -o-linear-gradient(right, #bbffbb, #93ff93);
+    background: -moz-linear-gradient(right, #bbffbb, #93ff93);
+    background: linear-gradient(to right, #bbffbb, #93ff93);
+    border-radius: 5px;
+}
+
+.wrong {
+    background: -webkit-linear-gradient(left, #ffd2d2, #ff9797);
+    background: -o-linear-gradient(right, #ffd2d2, #ff9797);
+    background: -moz-linear-gradient(right, #ffd2d2, #ff9797);
+    background: linear-gradient(to right, #ffd2d2, #ff9797);
+    border-radius: 5px;
+}
+
+.thumbnail {
+    min-height: 470px;
+    background-color: #a6e1ec;
+    border-radius: 25px;
+}
+
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+.left_sub_div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left_sub_div h2 {
+    background-color: #2b669a;
+    color: white;
+    text-align: left;
+    font-family: Algerian;
+    font-size: 180%;
+}
+
+body {
+    background-color: #003c71;
+}
+
+#left_div {
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown {
+    margin-top: 10px;
+}
+
+.dropdown button {
+    width: 77%;
+}
+
+.dropdown span {
+    font-size: 18px;
+}
+
+#right_div {
+    background-color: #2b669a;
+}
+
+.big {
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: x-large;
+    color: #2aabd2;
+    margin-top: 0px;
+}
+
+#stats_div h3{
+    margin-top: 0px;
+}
+
+#play_btn {
+    width: 25%;
+}
+
+#pause_btn {
+    width: 25%;
+}
+
+#stop_btn {
+    width: 25%;
+}
+
+#logo_left {
+    width: 80px;
+    height: 80px;
+    margin-right: 10%;
+}
+
+#logo_right {
+    width: 80px;
+    height: 80px;
+}
+
+#logo_top {
+    width: 200px;
+    height: 130px;
+    margin-left:50px
+}
+
+.caption {
+    margin: 0px;
+    padding: 0px;
+}
+
+.left_title {
+    font-size: x-large;
+    font-weight: 600;
+}
+

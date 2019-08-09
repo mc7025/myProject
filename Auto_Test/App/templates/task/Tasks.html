@@ -1,0 +1,51 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/tooltip.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/task/js/task.js"></script>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="../../static/task/css/task.css">{% endblock %}
+
+{% block page_title %}Tasks{% endblock %}
+
+{% block content %}
+
+    <h3>Task List</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Show</a></li>
+        <li role="presentation"><a href="/createtask/">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+        <li role="presentation" id="run_btn"><a href="#" data-toggle="tooltip" data-placement="top"
+                                                title="Please choose the task to run.">Run</a></li>
+        <li role="presentation" id="result_btn"><a href="#">Result</a></li>
+    </ul>
+
+    <table class="table table-hover table-condensed" id="cnn_table">
+        <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>Host IP</th>
+            <th>Case Description</th>
+            <th>Duration
+                <small>(unit:s)</small>
+            </th>
+            <th>Status</th>
+            <th>Description</th>
+            <th id="row_del"></th>
+            <th id="row_mod"></th>
+        </tr>
+    </table>
+
+    {% include 'base/Prompt.html' %}
+
+    {% include 'base/paginate.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

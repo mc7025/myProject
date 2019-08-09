@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Create Host{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/host/js/create_host.js"></script>
+{% endblock %}
+
+{% block page_title %}Hosts{% endblock %}
+
+{% block content %}
+    <h3>Create Host</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/hosts/">Show</a></li>
+        <li role="presentation" class="active"><a href="#">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+    </ul>
+
+    <div class="form-group">
+        <label for="host_ip" class="control-label">IP</label>
+        <input class="form-control" type="text" id="host_ip" placeholder="IP">
+    </div>
+    <div class="form-group" id="selectDiv">
+        <label for="data_type" class="control-label">OS</label>
+        <select class="form-control" id="host_os">
+            <option>Linux</option>
+            <option>Windows</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="host_username" class="control-label">Username</label>
+        <input class="form-control" type="text" id="host_username" placeholder="Username">
+    </div>
+    <div class="form-group">
+        <label for="host_password" class="control-label">Password</label>
+        <input class="form-control" type="text" id="host_password" placeholder="Password">
+    </div>
+    <button id="btn" class="btn btn-default btn-lg">Confirm</button>
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

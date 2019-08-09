@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/tooltip.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/result/js/results.js"></script>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="../../static/result/css/results.css">{% endblock %}
+
+{% block page_title %}Results{% endblock %}
+
+{% block content %}
+
+    <h3>Results List</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="#">List</a></li>
+        <li role="presentation" class="disabled"><a href="#">Detail</a></li>
+    </ul>
+
+    <table class="table table-hover table-condensed" id="cnn_table">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Result</th>
+            <th id="detail_btn"></th>
+        </tr>
+    </table>
+
+    {% include 'base/Prompt.html' %}
+
+    {% include 'base/paginate.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

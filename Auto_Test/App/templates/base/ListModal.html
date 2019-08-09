@@ -1,0 +1,20 @@
+<div class="modal fade bs-example-modal-lg" id="myListModal" tabindex="-1" role="dialog" aria-labelledby="myListModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h3></h3>
+            </div>
+            <div class="modal-body">
+
+                {% include 'base/paginate.html' %}
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-default" id="modal_btn">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>

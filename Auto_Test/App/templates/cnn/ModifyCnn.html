@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/cnn/js/modify_cnn.js"></script>
+{% endblock %}
+
+{% block page_title %}Cnn Models{% endblock %}
+
+{% block content %}
+    <h3>Modify Cnn</h3>
+    <ul class="nav nav-tabs">
+    <li role="presentation" ><a href="/cnns/">Show</a></li>
+    <li role="presentation"><a href="/createmodel/">Create</a></li>
+    <li role="presentation" class="active"><a href="#">Modify</a></li>
+    </ul>
+    <div class="form-group">
+        <label for="model_id" class="control-label">ID</label>
+        <input class="form-control" id="model_id" readonly value="{{ c_id }}">
+    </div>
+    <div class="form-group">
+        <label for="model_name" class="control-label">Name</label>
+        <input class="form-control" type="text" id="model_name" placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="model_type" class="control-label">Type</label>
+        <input class="form-control" type="text" id="model_type" placeholder="Type">
+    </div>
+    <div class="form-group">
+        <label for="model_format" class="control-label">Format</label>
+        <input class="form-control" type="text" id="model_format" placeholder="Format">
+    </div>
+    <div class="form-group">
+        <label for="model_path" class="control-label">Path</label>
+        <input class="form-control" type="text" id="model_path" placeholder="Path">
+    </div>
+    <div class="form-group" id="radio-div">
+        <span><b>IsPublic</b></span><br>
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="True" checked="true"><span> True </span>
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="False"><span> False </span>
+    </div>
+    <button id="btn" class="btn btn-lg btn-default">Confirm</button>
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/task/js/create_task.js"></script>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="../../static/task/css/create_task.css">{% endblock %}
+
+{% block page_title %}Tasks{% endblock %}
+
+{% block content %}
+    <h3>Create Task</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/tasks/">Show</a></li>
+        <li role="presentation" class="active"><a href="#">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+        <li role="presentation" id="run_btn" class="disabled"><a href="#">Run</a></li>
+        <li role="presentation" id="result_btn" class="disabled"><a href="#">Result</a></li>
+    </ul>
+
+    <div class="form-group" id="selectDiv">
+        <label for="t_caseType" class="control-label">Type</label>
+        <select class="form-control" id="t_caseType">
+            <option>Api</option>
+            <option>Sample</option>
+        </select>
+    </div>
+
+    <div class="input-group" id="t_hostIp_div">
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button" id="t_hostIp_btn"><b>Host IP</b></button>
+      </span>
+        <input class="form-control" placeholder="Host IP" id="t_hostIp_btn_input" readonly>
+    </div>
+
+    <div class="input-group" id="case_description_div">
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button" id="case_descriptionn_btn"><b>Case Description</b></button>
+      </span>
+        <input class="form-control" placeholder="Case Description" id="case_description_btn_input" readonly>
+    </div>
+
+    <div class="form-group" id="dur_div">
+        <label for="data_size" class="control-label">Duration
+            <small>(unit:s)</small>
+        </label>
+        <input class="form-control" type="text" id="t_duration" placeholder="Duration">
+    </div>
+
+    <div class="form-group" id="description_div">
+        <label for="t_description" class="control-label">Description</label>
+        <input class="form-control" type="text" id="t_description" placeholder="Description">
+    </div>
+
+    <div class="input-group" id="t_div">
+        <button id="btn" class="btn btn-default btn-lg">Confirm</button>
+    </div>
+
+    {% include 'base/ListModal.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

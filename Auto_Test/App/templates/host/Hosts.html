@@ -1,0 +1,40 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Hosts{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/host/js/host.js"></script>
+{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="../../static/host/css/host.css">{% endblock %}
+
+{% block page_title %}Hosts{% endblock %}
+
+{% block content %}
+
+    <h3>Host List</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Show</a></li>
+        <li role="presentation"><a href="/createhost/">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+    </ul>
+
+    <table class="table table-hover table-condensed" id="cnn_table">
+        <tr>
+            <th id="row_id">#</th>
+            <th id="row_name">IP</th>
+            <th id="row_type">OS</th>
+            <th id="row_del"></th>
+            <th id="row_mod"></th>
+        </tr>
+    </table>
+
+    {% include 'base/Prompt.html' %}
+
+    {% include 'base/paginate.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

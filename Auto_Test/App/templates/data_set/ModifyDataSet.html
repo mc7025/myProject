@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/data_set/js/modify_data_set.js"></script>
+{% endblock %}
+
+{% block page_title %}Data Set{% endblock %}
+
+{% block content %}
+
+    <h3>Modify Data Set</h3>
+    <ul class="nav nav-tabs">
+    <li role="presentation" ><a href="/dataset/">Show</a></li>
+    <li role="presentation"><a href="/createdata/">Create</a></li>
+    <li role="presentation" class="active"><a href="#">Modify</a></li>
+    </ul>
+
+    <div class="form-group">
+        <label for="data_id" class="control-label">ID</label>
+        <input class="form-control" id="data_id" readonly value="{{ d_id }}">
+    </div>
+    <div class="form-group">
+        <label for="data_name" class="control-label">Name</label>
+        <input class="form-control" type="text" id="data_name" placeholder="Name">
+    </div>
+    <div class="form-group" id="selectDiv">
+    <label for="data_type" class="control-label">Type</label>
+        <select class="form-control" id="data_type">
+            <option>Image</option>
+            <option>Video</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="data_size" class="control-label">Size</label>
+        <input class="form-control" type="text" id="data_size" placeholder="Size">
+    </div>
+    <div class="form-group">
+        <label for="data_path" class="control-label">Path</label>
+        <input class="form-control" type="text" id="data_path" placeholder="Path">
+    </div>
+    <button id="btn" class="btn btn-default btn-lg">Confirm</button>
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

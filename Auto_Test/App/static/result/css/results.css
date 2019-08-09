@@ -1,0 +1,7 @@
+#row_del, #row_mod {
+    width: 3px;
+}
+
+#row_id, #row_isPublic {
+    width: 100px;
+}

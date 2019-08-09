@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/sample_cases/js/sample.js"></script>
+{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="../../static/sample_cases/css/sample.css">{% endblock %}
+
+{% block page_title %}Sample Cases{% endblock %}
+
+{% block content %}
+
+    <h3>Sample Case List</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Show</a></li>
+        <li role="presentation"><a href="/createsample/">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+    </ul>
+
+    <table class="table table-hover table-condensed" id="cnn_table">
+        <tr>
+            <th id="row_id">#</th>
+            <th id="row_name">Type</th>
+            <th id="row_type">Classify Model</th>
+            <th id="row_format">Detect Model</th>
+            <th id="row_path">Data</th>
+            <th id="row_path">Description</th>
+            <th id="row_del"></th>
+            <th id="row_mod"></th>
+        </tr>
+    </table>
+
+    {% include 'base/Prompt.html' %}
+
+    {% include 'base/paginate.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

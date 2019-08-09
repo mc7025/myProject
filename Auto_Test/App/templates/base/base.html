@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Over Night Auto Test">
+    <meta name="author" content="Matt">
+    <title>{% block title %}{% endblock title %}</title>
+    <script type="text/javascript" src="../../static/base/js/jquery-3.1.1.min.js"></script>
+    {% block js %}{% endblock js %}
+    {% block css %}{% endblock css %}
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/base/img/favicon.ico">
+    <link rel="stylesheet" href="../../static/base/css/bootstrap.min.css">
+    <link href="../../static/base/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../static/base/css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img class="navbar-brand" src="../../static/base/img/intel-logo-white-100.png" alt="">
+                <span class="navbar-brand">Over Night</span>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar" id="base_ul">
+                    <li id="cnns_li"><a href="/cnns/">Cnn Models</a></li>
+                    <li id="dataset_li"><a href="/dataset/">Data Set</a></li>
+                    <li id="hosts_li"><a href="/hosts/">Hosts</a></li>
+                    <li id="api_li"><a href="/apicases/">Api Cases</a></li>
+                    <li id="sample_li"><a href="/samplecases/">Sample Cases</a></li>
+                    <li id="task_li"><a href="/tasks/">Tasks</a></li>
+                    <li id="result_li"><a href="/results/">Results</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main ">
+                <h1 class="page-header">{% block page_title %}{% endblock %}</h1>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

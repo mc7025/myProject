@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <title>Title</title>
+    <script type="text/javascript" src="../static/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/js/index.js"></script>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-2" id="left_div">
+        <div class="left_sub_div">
+            <img src="../static/img/intel-logo-white-100.png" alt="...">
+        </div>
+        <div class="left_sub_div">
+            <img id="logo_top" class="img-col" src="../static/img/1.png" alt="...">
+        </div>
+
+        <div class="left_sub_div" style="margin-top: -50px;">
+            <img id="logo_left" class="img-col" src="../static/img/4.jpg" alt="...">
+            <img id="logo_right" class="img-col" src="../static/img/5.png" alt="...">
+        </div>
+        <div id="controls" class="left_sub_div">
+            <h2>&nbsp;CONTROLS</h2>
+            <button class="btn btn-info btn-lg" id="play_btn">&#9654;</button>
+            <button class="btn btn-info btn-lg" id="pause_btn">&#10074;&#10074;</button>
+            <button class="btn btn-info btn-lg" id="stop_btn">&#9209;</button>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" id="pf_btn">
+                    <span>HDDL</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="pf_ul">
+                    <li><a href="#">HDDL</a></li>
+                    <li><a href="#">CPU</a></li>
+                    <li><a href="#">GPU</a></li>
+                    <li><a href="#">FPGA</a></li>
+                    <li><a href="#">NVIDIA</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" id="network_btn">
+                    <span>GoogleNetV1</span> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="network_ul">
+                    <li><a href="#">GoogleNetV1</a></li>
+                    <li><a href="#">Alexnet</a></li>
+                    <li><a href="#">VGG_16</a></li>
+                    <li><a href="#">Resnet-18</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="left_sub_div" style="color: white;" id="stats_div">
+            <h2>&nbsp;STATS</h2>
+            <div>
+                <span class="left_title">Throughput</span><br>
+                <span id="throughput" class="big"></span>&nbsp;FPS
+            </div>
+            <div>
+                <span class="left_title">Top-1 Accuracy</span><br>
+                <span id="top1" class="big"></span>&nbsp;%
+            </div>
+            <div>
+                <span class="left_title">Top-5 Accuracy</span><br>
+                <span id="top5" class="big"></span>&nbsp;%
+            </div>
+            <div id="c_power">
+                <span class="left_title" id="power_title">Myx Power</span><br>
+                <span id="myx" class="big"></span>&nbsp;W
+            </div>
+            <div id="b_power">
+                <span class="left_title">Board Power</span><br>
+                <span id="board" class="big"></span>&nbsp;W
+            </div>
+            <div>
+                <span class="left_title">Efficiency</span><br>
+                <span id="efficiency" class="big"></span>&nbsp;img/s/W
+            </div>
+            <div>
+                <span class="left_title">Temp</span><br>
+                <span id="temp" class="big"></span>&nbsp;℃
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-10" id="right_div">
+
+        <div class="row" id="top_row">
+            <div class="col-xs-6 col-sm-3 row_img">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 row_img">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 row_img">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 row_img">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" id="bot_row">
+            <div class="col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-3">
+                <div class="thumbnail">
+                    <img class="img-col">
+                    <div class="caption">
+                        <h4></h4>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

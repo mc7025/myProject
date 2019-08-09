@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/sample_cases/js/modify_sample.js"></script>
+{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="../../static/sample_cases/css/modify_sample.css">{% endblock %}
+
+{% block page_title %}Sample Cases{% endblock %}
+
+{% block content %}
+    <h3>Modify Sample Case</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="/samplecases/">Show</a></li>
+        <li role="presentation"><a href="/createsample/">Create</a></li>
+        <li role="presentation" class="active"><a href="#">Modify</a></li>
+    </ul>
+    <div class="form-group">
+        <label for="s_id" class="control-label">ID</label>
+        <input class="form-control" id="s_id" readonly value="{{ s_id }}">
+    </div>
+    <div class="form-group">
+        <label for="s_type" class="control-label">Type</label>
+        <input class="form-control" type="text" id="s_type" placeholder="Type">
+    </div>
+
+    <div class="input-group" id="c_cls_div">
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button" id="c_cls_btn"><b>Classify Model</b></button>
+      </span>
+        <input class="form-control" placeholder="Classify Model" id="c_cls_btn_input" readonly>
+    </div>
+
+    <div class="input-group" id="c_det_div">
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button" id="c_det_btn"><b>Detect Model</b></button>
+      </span>
+        <input class="form-control" placeholder="Detect Model" id="c_det_btn_input" readonly>
+    </div>
+
+    <div class="input-group" id="d_div">
+      <span class="input-group-btn">
+        <button class="btn btn-info" type="button" id="d_btn"><b>Data</b></button>
+      </span>
+        <input class="form-control" placeholder="Data" id="d_btn_input" readonly>
+    </div>
+
+    <div class="form-group" id="description_div">
+        <label for="s_description" class="control-label">Description</label>
+        <input class="form-control" type="text" id="s_description" placeholder="Description">
+    </div>
+
+    <div class="input-group" id="t_div"><button id="btn" class="btn btn-default btn-lg">Confirm</button></div>
+
+    {% include 'base/ListModal.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}

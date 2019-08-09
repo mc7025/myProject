@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Over Night{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="../../static/base/js/modal.js"></script>
+    <script type="text/javascript" src="../../static/base/js/publicFun.js"></script>
+    <script type="text/javascript" src="../../static/cnn/js/cnn.js"></script>
+{% endblock %}
+
+{% block css %}<link rel="stylesheet" href="../../static/cnn/css/cnn.css">{% endblock %}
+
+{% block page_title %}Cnn Models{% endblock %}
+
+{% block content %}
+
+    <h3>Cnn List</h3>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Show</a></li>
+        <li role="presentation"><a href="/createmodel/">Create</a></li>
+        <li role="presentation" class="disabled"><a href="#">Modify</a></li>
+    </ul>
+
+    <table class="table table-hover table-condensed" id="cnn_table">
+        <tr>
+            <th id="row_id">#</th>
+            <th id="row_name">Name</th>
+            <th id="row_type">Type</th>
+            <th id="row_format">Format</th>
+            <th id="row_path">Path</th>
+            <th id="row_isPublic">IsPublic</th>
+            <th id="row_del"></th>
+            <th id="row_mod"></th>
+        </tr>
+    </table>
+
+    {% include 'base/Prompt.html' %}
+
+    {% include 'base/paginate.html' %}
+
+    {% include 'base/Confirm.html' %}
+
+{% endblock %}
