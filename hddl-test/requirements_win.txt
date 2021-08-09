@@ -1,4 +1,4 @@
 psutil==5.6.1
 PyYAML==5.1
 WMI==1.4.9
-pywin32==224
+pywin32==301
